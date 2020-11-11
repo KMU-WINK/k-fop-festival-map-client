@@ -1,0 +1,43 @@
+.card{
+    width: 327px;
+    height: 245px;
+    border: 1px solid #dddddd;
+    border-radius: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+h3{
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.star_box{
+    position: absolute;
+    top: 22px;
+    right: 0;
+    margin-right: 20px;
+}
+
+.script{
+    width: 287px;
+    clear: both;
+    margin: 0 20px;
+}
+
+.star_box img{
+    width: 20px;
+    height: 20px;
+    margin-right: 6px;
+}
+
+.photo{
+    display: flex;
+    width: 500px;
+}
+
+.photo img{
+    height: 119px;
+    width: 119px;
+    margin-left: 20px;
+}
