@@ -1,37 +1,40 @@
 import React from 'react';
 import styled from 'styled-components';
-import searchIcon from '../../images/search.png'
+import rightArrow from '../../../../k-fop-festival-map-client/src/images/right-arrow.svg'
 
-const Wrap = styled.div`
-    width : 250px;
-    border-style : solid; 
+const Header = styled.div`
+    height : 55px;
+    text-align : center;
+    color : #1A465F;
+    font-size : 25px;
+    font-weight : bold;
+    display : flex;
+    flex-direction : row;
+    align-items : center;
 `;
 
-const SearchHeader = styled.input.attrs({
-    type : 'text'
-})`
-    width : 200px;
-    height : 30px;
-    border : 0;
-    outline : 0;
+const Text = styled.div`
+    flex : 1;
 `;
 
-// span으로 할까여 버튼으로 할까여?
-const SearchButton = styled.span` 
-    border : none;
-    background : transparent;
-    float : right;
+const DivIcon = styled.div`
+    width : 24px;
+    height : 24px;
+    display : flex;
+    flex-direction : row;
+    align-items : center;
+    margin-left : 24px;
 `;
 
-function Header() {
+function MainHeader(props) {
     return (
-        <Wrap>
-            <SearchHeader placeholder={"부스 이름, 주제 등으로 찾기"}/>
-            <SearchButton>
-                <img src = {searchIcon}/>
-            </SearchButton>
-        </Wrap>
-    );
+        <Header>
+            <DivIcon><img src = {rightArrow}/></DivIcon>
+            <Text>{props.name}</Text>
+            <DivIcon> </DivIcon>
+        </Header>
+
+    )
 }
 
-export default Header;
+export default MainHeader;
