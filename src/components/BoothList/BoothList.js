@@ -5,7 +5,6 @@ function Booth_list(){
     return(
         <div id="body">
             <List>
-                <TapBar></TapBar>
                 <BoothCategory>이 시간 가장 인기있는 부스!</BoothCategory>
                 <Image>
                     <Booth>
@@ -31,22 +30,13 @@ const List = styled.div`
     position: relative;
     background: white;
     border: 1px solid #dddddd;
-    width: 367px;
-    height: 826px;
+    width: 100%;
+    height : 100vh;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
     overflow: hidden;
 `
 
-const TapBar = styled.div`
-    position: absolute;
-    width: 49px;
-    height: 3px;
-    left: 159px;
-    top: 7px;
-    background: #CCCCCC;
-    border-radius: 1px;
-`
 const BoothCategory = styled.span`
     font-size: 24px;
     position: absolute;
