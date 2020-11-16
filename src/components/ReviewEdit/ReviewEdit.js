@@ -50,6 +50,7 @@ export function ReviewEdit(){
         let file = e.target.files[0];
         reader.onloadend = () => {
             setImages({
+                ...images,
                 file : file,
                 previewURL : reader.result
             })
@@ -100,8 +101,12 @@ export function ReviewEdit(){
             </div>
             <div className="upload_img">
                 <button className={"img_btn"}></button>
-                <button className={"review_img"}></button>
-                <button className={"review_img"}></button>
+                <div className={"review_img"}>
+                    <button className={"delete_btn"}></button>
+                </div>
+                <div className={"review_img"}>
+                    <button className={"delete_btn"}></button>
+                </div>
                 {/*<input type="file"*/}
                 {/*       accept="image/jpg,impge/png,image/jpeg,image/gif"*/}
                 {/*       name="profile_img"*/}
@@ -111,7 +116,9 @@ export function ReviewEdit(){
                 {/*</input>*/}
                 {/*{profile_preview}*/}
             </div>
-            <WriteReviewButton name={"리뷰 작성"}/>
+            <div className={"btn"}>
+                <WriteReviewButton name={"리뷰 작성"}/>
+            </div>
 
             {/*<Button>*/}
             {/*    <button onClick={postBoard}>리뷰 작성</button>*/}
@@ -143,7 +150,7 @@ const Wrap = styled.div`
     }
     .review {
         width: 100%;
-        text-align: center;
+        text-align: center;        
     }
     .quest {
         font-family: 'Noto Sans KR', sans-serif;
@@ -163,17 +170,33 @@ const Wrap = styled.div`
         width: 100%;
         height: 102px;
         margin: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .img_btn {
         width: 102px;
         height: 102px;
         background: url(${addImage});
+        border: transparent;
     }
     .review_img {
         width: 102px;
         height: 102px;
-        margin-left: 20px;        
+        margin-left: 20px;
         background: url(${reviewImage});
+        border: transparent;
+    }
+    .delete_btn {
+        width: 12px;
+        height: 12px;
+        float: right;
+        margin: 10px;
+        background: url(${deleteImage});
+        border: transparent;
+    }
+    .btn {
+        height: 43px;
     }
     // .upload_btn {        
     //     width: 100%;
