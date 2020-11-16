@@ -1,10 +1,10 @@
 #review{
     position: relative;
     background: white;
-    width: 327px;
+    width: calc(100% - 40px);
     height: 245px;
     border: 1px solid #dddddd;
-
+    margin: 20px;
 }
 #review span{
     position: absolute;
