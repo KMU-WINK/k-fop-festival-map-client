@@ -82,12 +82,9 @@ export function ReviewEdit(){
         <Wrap>
             <Header name={"리뷰 남기기"}></Header>
             <div className={"title"}>
-                <div className={"title_menu"}>
-                    소융대 비빔면+삼겹살
-                </div>
+                <div className={"title_menu"}>소융대 비빔면+삼겹살</div>
             </div>
             <div className={"review"}>
-                {/*<text className={"quest"}>이 부스 어땠어요?</text>*/}
                 <p className={"quest"}>이 부스 어때요? 🤔</p>
                 <ReviewStar></ReviewStar>
                 <br/>
@@ -116,15 +113,7 @@ export function ReviewEdit(){
                 {/*</input>*/}
                 {/*{profile_preview}*/}
             </div>
-            <div className={"btn"}>
-                <WriteReviewButton name={"리뷰 작성"}/>
-            </div>
-
-            {/*<Button>*/}
-            {/*    <button onClick={postBoard}>리뷰 작성</button>*/}
-            {/*</Button>*/}
-            {/*확인을 위해 출력*/}
-            {/*<div>{JSON.stringify(inputs)}</div>*/}
+            <WriteReviewButton name={"리뷰 작성"}/>
         </Wrap>
     );
 }
@@ -195,25 +184,4 @@ const Wrap = styled.div`
         background: url(${deleteImage});
         border: transparent;
     }
-    .btn {
-        height: 43px;
-    }
-    // .upload_btn {        
-    //     width: 100%;
-    //     height: 100px;
-    //     margin-top: 10px;        
-    // }
-    // Button {
-    //     width: 90%;
-    //     height: 43px;
-    //     text-alignment: center;
-    //     font-size: 18px; 
-    //     margin: auto;
-    //     display: block;
-    // }
-    // .profile_preview {
-    //     width: 100px;
-    //     height: 100px;
-    //     margin-bottom: 10px;
-    // }
 `;
