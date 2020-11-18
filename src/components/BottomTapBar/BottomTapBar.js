@@ -1,7 +1,6 @@
 import home from '../../images/home.svg'
 import map from '../../images/map.svg'
 import setting from '../../images/setting.svg'
-
 import styled from 'styled-components'
 
 function BottomTapBar(){
@@ -23,6 +22,8 @@ function BottomTapBar(){
 }
 
 const BottomTap = styled.div`
+    position : fixed;
+    width : 100%;
     height : 56px;
     display : flex;
     bottom : 0;
