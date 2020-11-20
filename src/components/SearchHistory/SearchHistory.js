@@ -24,12 +24,13 @@ function SearchHistory(){
 }
 
 const SearchList = styled.div`
-    width: 375px;
+    width: 100%;
     height: 49px;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
     display : flex;
     align-items : center;
-    justify-content : space-between
+    justify-content : space-between;
+    border-top : 1px solid #757575
 `
 
 const FontStyle = styled.span`
