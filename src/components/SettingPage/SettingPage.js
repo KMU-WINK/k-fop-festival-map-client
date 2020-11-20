@@ -1,25 +1,26 @@
 import React from 'react';
-import styled, {createGlobalStyle} from 'styled-components';
+import styled from 'styled-components';
+
+import MainHeader from '../Header/Header';
+import BottomTapBar from "../BottomTapBar/BottomTapBar";
+
 import QR from '../../images/QR.png';
 import event from '../../images/event.png';
 import next from '../../images/next.png';
 
 const Setting = styled.div`
-    width : 300px;
+    width : 100%;
 `;
 
 const Wrap = styled.div`
-    width : 80%;
+    width : 100%;
     margin : 30px;
 `;
 
 const SettingButton = styled.button`
-    width : 100%;
+    width : 90%;
     height : 30px;
     background : transparent;
-    margin-left : 10px;
-    margin : 5px;
-    border-bottom : gray;
     border : none;
     font-size : 20px;
     font-weight : bold;
@@ -28,15 +29,14 @@ const SettingButton = styled.button`
     justify-content : space-between;
 `;
 
-function eventPage(){
-
-}
 
 function SettingPage(){
     return(
         <Setting>
+            <MainHeader name = {"MY PAGE"}/>
+
             <Wrap>
-                <SettingButton onClick = {eventPage}>
+                <SettingButton>
                     <div><img src = {event}/> Event</div>
                     <img src = {next}/>
                 </SettingButton>
@@ -49,19 +49,22 @@ function SettingPage(){
 
             <Wrap>
                 <SettingButton>
-                    ABOUT 크포프<img src = {next}/>
+                    <div>ABOUT 크포프</div>
+                    <img src = {next}/>
                 </SettingButton>
 
                 <SettingButton>
-                    PUSH 알림<img src = {next}/>
+                    <div>PUSH 알림</div>
+                    <img src = {next}/>
                 </SettingButton>
 
                 <SettingButton>
-                    부스 문의 사항<img src = {next}/>
+                    <div>부스 문의 사항</div>
+                    <img src = {next}/>
                 </SettingButton>
             </Wrap>
+            <BottomTapBar/>
         </Setting>
-
     )
 }
 
