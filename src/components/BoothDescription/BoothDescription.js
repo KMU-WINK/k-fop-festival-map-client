@@ -1,24 +1,26 @@
 import styled from "styled-components";
 import React from "react"
 
-function BoothDescription(){
+function BoothDescription(props){
+    console.log(props)
+    // console.log(props.des[0])
     return(
         <>
             <Description>
                 <LeftDescription>분류</LeftDescription>
-                <RightDescription>간식 | 한식</RightDescription>
+                <RightDescription>{props.category}</RightDescription>
             </Description>
             <Description>
                 <LeftDescription>웨이</LeftDescription>
-                <RightDescription>10~15분</RightDescription>
+                <RightDescription>{props.way}</RightDescription>
             </Description>
             <Description>
                 <LeftDescription>운영시간</LeftDescription>
-                <RightDescription>10:00 ~ 20:00</RightDescription>
+                <RightDescription>{props.time}</RightDescription>
             </Description>
             <Description>
                 <LeftDescription>상세설명</LeftDescription>
-                <RightDescription>이 조합은 미쳤다. 주인장 나와. 이렇게 장사하면 망해!!</RightDescription>
+                <RightDescription>{props.detail}</RightDescription>
             </Description>
         </>
     )
