@@ -8,7 +8,7 @@ export function StampCard(props){
     return (
         <Wrap>
             <Stamp>
-                <img className={"img"} src={sw}/>
+                <img className={"img"} src={props.imageURL}/>
                 <Content>
                     <p>{props.date}</p>
                     <p>{props.time}</p>
