@@ -5,15 +5,15 @@ import art from '../../images/stamp-art.png';
 import Header from "../Header/Header";
 import WriteReviewButton from "../Button/Button";
 
-export function StampCard(){
+export function StampCard(props){
     return (
         <Wrap>
             <Header name={"스탬프 모아보기"}></Header>
             <Stamp>
                 <img className={"img"} src={sw}/>
                 <Content>
-                    <p id={"date"}>20/11/04</p>
-                    <p id={"time"}>15:20</p>
+                    <p id={"date"}>{props.date}</p>
+                    <p id={"time"}>{props.time}</p>
                     <p id={"price"}>￦ 5,000</p>
                     <p id={"list"}>쫄면 & 삼겹</p>
                 </Content>
