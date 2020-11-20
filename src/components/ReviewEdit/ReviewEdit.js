@@ -31,7 +31,6 @@ export function ReviewEdit(props){
     // if(inputs.file !== ''){
     //     profile_preview = <img className="profile_preview" src={inputs.previewURL}/>
     // }
-
     return (
         <Wrap>
             <Header name={"리뷰 남기기"}></Header>
