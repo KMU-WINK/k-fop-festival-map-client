@@ -38,7 +38,6 @@ function MainHeader(props) {
             <Text>{props.name}</Text>
             <DivIcon><img src = {props.image}/></DivIcon>
         </Header>
-
     )
 }
 
