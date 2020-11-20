@@ -4,11 +4,11 @@ import share from "../../images/share.svg";
 import styled from "styled-components";
 import React from "react";
 
-function BoothLike(){
+function BoothLike(props){
     return(
         <Container>
             <img src={like} alt=""/>
-            <Like>1032명이 좋아합니다</Like>
+            <Like>{props.like}명이 좋아합니다</Like>
             <img src={share} alt=""/>
         </Container>
     )
