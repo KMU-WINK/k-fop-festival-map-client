@@ -34,7 +34,7 @@ export function QRcodePage(){
 
     return(
         <Wrap>
-            <MainHeader name = {"코드 스캔"} image = {img}/>
+            <MainHeader name = {"코드 스캔"} content = {<img src = {img}/>}/>
             <div>
                 <QrReader
                     delay={300}
