@@ -4,21 +4,27 @@ import { IoIosClose } from "react-icons/io";
 
 // props는 어떻게 줘야될 지 몰라서 틀만 먼저 잡아놨습니다.
 
-function SearchHistory(){
+function SearchHistory(props){
     return(
         <>
             <SearchList>
                 <TxtSearchHistory>검색 기록</TxtSearchHistory>
                 <TxtDeleteAll>  전체삭제</TxtDeleteAll>
             </SearchList>
-            <MySearchList>
-                <MySearchData>마라탕</MySearchData>
-                <DeleteBtn size = "24"></DeleteBtn>
-            </MySearchList>
-            <MySearchList>
-                <MySearchData>마라탱</MySearchData>
-                <DeleteBtn size = "24"></DeleteBtn>
-            </MySearchList>
+            {props.histories.map((history) =>
+                <MySearchList>
+                    <MySearchData>{history.name}</MySearchData>
+                    <DeleteBtn size = "24"></DeleteBtn>
+                </MySearchList>
+            )}
+            {/*<MySearchList>*/}
+            {/*    <MySearchData>마라탕</MySearchData>*/}
+            {/*    <DeleteBtn size = "24"></DeleteBtn>*/}
+            {/*</MySearchList>*/}
+            {/*<MySearchList>*/}
+            {/*    <MySearchData>마라탱</MySearchData>*/}
+            {/*    <DeleteBtn size = "24"></DeleteBtn>*/}
+            {/*</MySearchList>*/}
         </>
     )
 }
