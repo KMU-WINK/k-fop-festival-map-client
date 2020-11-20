@@ -14,17 +14,17 @@ export const getWeather = async (city) => {
 export const getPopularBooth = () => {
     return [
         {
-            thumbnailUrl : 'https://wink.kookmin.ac.kr/static/images/upload/6f177eb4df54caf235a6751f8eee38be.gif',
+            thumbnailUrl : 'https://wink.kookmin.ac.kr/static/images/upload/IMG_20190626_014736_792.jpg',
             title : '예술대학 분장',
             bothCode : 'B-1',
         },
         {
-            thumbnailUrl : 'https://wink.kookmin.ac.kr/static/images/upload/6f177eb4df54caf235a6751f8eee38be.gif',
-            title : '윙크 대마초 체험',
+            thumbnailUrl : 'https://wink.kookmin.ac.kr/static/images/upload/IMG_20190626_014736_792.jpg',
+            title : '네이버',
             bothCode : 'A-1',
         },
         {
-            thumbnailUrl : 'https://wink.kookmin.ac.kr/static/images/upload/6f177eb4df54caf235a6751f8eee38be.gif',
+            thumbnailUrl : 'https://wink.kookmin.ac.kr/static/images/upload/IMG_20190626_014736_792.jpg',
             title : '윙크 대마초 체험',
             bothCode : 'A-1',
         },

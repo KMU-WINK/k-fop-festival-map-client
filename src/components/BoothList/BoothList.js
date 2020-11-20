@@ -7,11 +7,10 @@ function Booth_list(props){
             <List>
                 <BoothCategory>{props.title}</BoothCategory>
                 <Image>
-                    {props.booths.map((booth) => <Booth>
+                    {props.booths.map((booth) => <Booth thumbnailUrl={booth.thumbnailUrl}>
                         <Name>{booth.title}</Name>
                         <Place>{booth.bothCode}</Place>
                     </Booth>)}
-
                 </Image>
             </List>
         </div>
@@ -46,7 +45,7 @@ const Image = styled.div`
 `
 const Booth = styled.div`
     display: inline;
-    background-image: url(${sam});
+    background-image: url(${(props) => props.thumbnailUrl});
     background-size: cover;
     width: 119px;
     height: 119px;
