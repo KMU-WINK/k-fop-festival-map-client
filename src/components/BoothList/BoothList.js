@@ -1,24 +1,16 @@
 import styled from 'styled-components';
 import sam from '../../images/samgyeopsal.png'
 
-function Booth_list(){
+function Booth_list(props){
     return(
         <div id="body">
             <List>
-                <BoothCategory>이 시간 가장 인기있는 부스!</BoothCategory>
+                <BoothCategory>{props.title}</BoothCategory>
                 <Image>
-                    <Booth>
-                        <Name>예술대학 분장</Name>
-                        <Place>B-1</Place>
-                    </Booth>
-                    <Booth>
-                        <Name>예술대학 분장</Name>
-                        <Place>B-1</Place>
-                    </Booth>
-                    <Booth>
-                        <Name>예술대학 분장</Name>
-                        <Place>B-1</Place>
-                    </Booth>
+                    {props.booths.map((booth) => <Booth>
+                        <Name>{booth.title}</Name>
+                        <Place>{booth.bothCode}</Place>
+                    </Booth>)}
 
                 </Image>
             </List>
