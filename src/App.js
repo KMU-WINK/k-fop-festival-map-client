@@ -5,7 +5,10 @@ import React from "react";
 
 function App() {
   return <>
-    <ReviewEdit/>
+    <ReviewEdit
+        title="소융대 비빔면+삼겹살"
+        thumbnailUrl="https://wink.kookmin.ac.kr/static/images/1.jpg"
+    />
   </>
 }
 

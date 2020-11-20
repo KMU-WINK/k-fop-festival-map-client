@@ -31,21 +31,21 @@ export function ReviewEdit(props){
     // if(inputs.file !== ''){
     //     profile_preview = <img className="profile_preview" src={inputs.previewURL}/>
     // }
-
+    console.log(props);
     return (
         <Wrap>
-            <Header name={"리뷰 남기기"}></Header>
-            <Title>
-                <Text>{props.name}</Text>
+            <Header name="리뷰 남기기"></Header>
+            <Title background={props.thumbnailUrl}>
+                <Text>{props.title}</Text>
             </Title>
             <Review>
-                <p className={"quest"}>이 부스 어때요? 🤔</p>
-                <ReviewStar></ReviewStar>
+                <p className="quest">이 부스 어때요? 🤔</p>
+                <ReviewStar />
                 <br/>
                 <textarea
                     type="text"
                     name="content"
-                    placeholder={"솔직한 리뷰를 작성해주세요!"} />
+                    placeholder="솔직한 리뷰를 작성해주세요!" />
             </Review>
             <div className="upload_img">
                 <button className={"img_btn"}></button>
@@ -66,7 +66,7 @@ export function ReviewEdit(props){
 }
 
 ReviewEdit.defaultProps = {
-    name: '소융대 비빔면+삼겹살'
+    title: '제목'
 };
 
 const Text = styled.div`
@@ -84,7 +84,7 @@ const Title = styled.div`
     width: 100%;
     height: 219px;
     border: transparent;
-    background: url(${background});
+    background: url(${(props) => props.background});
 `;
 const Review = styled.div`
     width: 100%;
